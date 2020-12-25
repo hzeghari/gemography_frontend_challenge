@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
-import React, { Component, Fragment } from 'react';
-import { render } from '@testing-library/react';
+import React from 'react';
+// import { render } from '@testing-library/react';
 import { Pagination } from 'antd';
 import 'antd/dist/antd.css';
 
