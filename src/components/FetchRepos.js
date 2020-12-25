@@ -112,7 +112,7 @@ export default class FetchRepos extends React.Component{
                       {/* <div className='mr-1 inline box-content h-16 w-16 border-2 border-purple-500 hover:border-gray-500'>
                         Starts : {element.stargazers_count}
                       </div> */}
-                      <div className='mr1 inline'>
+                      <div className='mr-1 inline'>
                         <GitHubButton href={element.html_url} data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">
                           Star
                         </GitHubButton>
@@ -121,7 +121,7 @@ export default class FetchRepos extends React.Component{
                         Issues : {element.open_issues_count}
                       </div> */}
                       <div className='mr-1 inline'>
-                        <GitHubButton href={element.html_url} data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue ntkme/github-buttons on GitHub">
+                        <GitHubButton href={element.html_url+"/issues"} data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue ntkme/github-buttons on GitHub">
                           Issue
                         </GitHubButton>
                       </div>
