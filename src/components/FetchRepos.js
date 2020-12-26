@@ -22,6 +22,7 @@ export default class FetchRepos extends React.Component{
         loading: true,
         page: 1,
         currentDate: date,
+
       };
       console.log(date);
 
@@ -69,6 +70,8 @@ export default class FetchRepos extends React.Component{
     //   var diff = 
     //   return diff;
     // }
+
+   
 
     render(){
       
@@ -132,9 +135,9 @@ export default class FetchRepos extends React.Component{
                           Issue
                         </GitHubButton>
                       </div> */}
-                      {/* <div className='inline'>
-                        Created at / {element.created_at} / {this.state.currentDate} by  {element.owner.login}
-                      </div> */}
+                      <div className='inline-flex'>
+                        Created at {element.created_at}  | by  {element.owner.login}
+                      </div>
                     </div>
                   </div>
                 </div>
