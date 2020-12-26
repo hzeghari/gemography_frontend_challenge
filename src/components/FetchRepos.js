@@ -5,8 +5,8 @@ import React from 'react';
 import { Pagination } from 'antd';
 import 'antd/dist/antd.css';
 
-import GitHubButton from 'react-github-btn';
-import { Fork, Star, UsedBy, Watch } from 'react-github-buttons-hzeghari';
+// import GitHubButton from 'react-github-btn';
+import { Star,  Watch } from 'react-github-buttons-hzeghari';
 
 
 export default class FetchRepos extends React.Component{
