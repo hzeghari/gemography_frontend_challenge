@@ -6,6 +6,7 @@ import { Pagination } from 'antd';
 import 'antd/dist/antd.css';
 
 import GitHubButton from 'react-github-btn';
+import { Fork, Star, UsedBy, Watch } from 'react-github-buttons-hzeghari';
 
 
 export default class FetchRepos extends React.Component{
@@ -106,25 +107,31 @@ export default class FetchRepos extends React.Component{
                         {element.name}
                     </div>
                     <div class="w-screen text-sm text-gray-500">
-                        {element.description}
+                        <p>{element.description}</p>
                     </div>
                     <div class="text-sm text-gray-500">
                       {/* <div className='mr-1 inline box-content h-16 w-16 border-2 border-purple-500 hover:border-gray-500'>
                         Starts : {element.stargazers_count}
                       </div> */}
-                      <div className='mr-1 inline'>
+                      {/* <div className='mr-1 inline'>
                         <GitHubButton href={element.html_url} data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">
                           Star
                         </GitHubButton>
+                      </div> */}
+                      <div className='mr-1 inline-flex'>
+                        <Star className='inline-flex' owner={element.owner.login} repo={element.name} count={element.stargazers_count}/>
+                      </div>
+                      <div className='mr-1 inline-flex'>
+                        <Watch className='inline-flex' owner={element.owner.login} repo={element.name} count={element.open_issues_count}/>
                       </div>
                       {/* <div className='mr-1 inline box-content h-16 w-16 border-2 border-purple-500 hover:border-gray-500'>
                         Issues : {element.open_issues_count}
                       </div> */}
-                      <div className='mr-1 inline'>
-                        <GitHubButton href={element.html_url+"/issues"} data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue ntkme/github-buttons on GitHub">
+                      {/* <div className='mr-1 inline'>
+                        <GitHubButton count={element.open_issues_count} href={element.html_url} data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue ntkme/github-buttons on GitHub">
                           Issue
                         </GitHubButton>
-                      </div>
+                      </div> */}
                       {/* <div className='inline'>
                         Created at / {element.created_at} / {this.state.currentDate} by  {element.owner.login}
                       </div> */}

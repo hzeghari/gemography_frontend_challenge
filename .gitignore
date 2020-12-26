@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# !node_modules/
+# node_modules/*
+# !node_modules/react-github-buttons/**
+
+
 # testing
 /coverage
 
